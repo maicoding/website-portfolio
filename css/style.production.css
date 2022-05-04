@@ -4,7 +4,6 @@
 * Autoprefixer: v10.4.4
 * Browsers: last 4 version
 */
-
 /* Colors used
 Text Color (Dark Blue): #0F1B26;
  Primary Color (Red): #ff0000;
@@ -18,39 +17,16 @@ Text Color (Dark Blue): #0F1B26;
  Grid Color: lightgray;
 
  */
-:root {
-  /*Colors*/
-  --text-color: #0F1B26;
-  --primary-color: #ff0000;
-  --secondary-color: #FB8604;
-  --tertiary-color: #1200ae;
-  --quaternary-color: #ffaa00;
-  --quinary-color: #2b2b2b;
-  --background-color: #ffffff;
-  --black: #000000;
-  --white: #ffffff;
-  --grid-color: lightgray;
-  /*fonts*/
-  --body-font-size: 16px;
-  --font-weight: 400;
-  --line-height: 1.6;
-  --h1-font-size: 30px;
-  --h1-font-weight: 700;
-  --h2-font-size: 24px;
-  --h2-font-weight: 700;
-  --h3-font-size: 18px;
-  --h3-font-weight: 500;
-}
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* >>>General elements<<< */
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: #ffffff;
+  color: #0F1B26;
   font-family: "Fira Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -61,21 +37,21 @@ body {
 }
 
 h1 {
-  color: var(--text-color);
-  font-size: var(--h1-font-size);
-  font-weight: var(--h1-font-weight);
+  color: #0F1B26;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 h2 {
   color: inherit;
-  font-size: var(--h2-font-size);
-  font-weight: var(--h2-font-weight);
+  font-size: 24px;
+  font-weight: 700;
 }
 
 h3 {
   color: inherit;
-  font-size: var(--h3-font-size);
-  font-weight: var(--h3-font-weight);
+  font-size: 18px;
+  font-weight: 500;
 }
 
 main {
@@ -84,12 +60,12 @@ main {
 
 a {
   /* unvisited link */
-  color: var(--text-color);
+  color: #0F1B26;
 }
 
 a:visited {
   /* visited link */
-  color: var(--tertiary-color);
+  color: #1200ae;
 }
 
 a:hover,
@@ -100,7 +76,7 @@ a:focus {
 
 a:active {
   /* selected link */
-  color: var(--primary-color);
+  color: #ff0000;
 }
 
 /* >>>Header elements<<< */
@@ -119,16 +95,16 @@ a:active {
 
 .page-header_item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px;
   height: auto;
   width: 25%;
 }
 
 .page-header_item:last-child {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin-right: auto;
   text-align: right;
 }
@@ -155,7 +131,7 @@ a:active {
   background-color: inherit;
   bottom: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   left: 0;
   position: fixed;
   text-align: center;
@@ -163,17 +139,36 @@ a:active {
 }
 
 /* >>>Misc elements<<< */
-.button,
-button {
+.button {
   /* style button */
-  background-color: var(--secondary-color);
+  background-color: #FB8604;
   /* overwrites browser defaults */
   /* resets the border */
   border: none;
   /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  color: var(--black);
+  color: #000000;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  padding: 10px;
+  text-decoration: none;
+  -webkit-transition: 0.9s opacity;
+  -o-transition: 0.9s opacity;
+  transition: 0.9s opacity;
+}
+
+button {
+  /* style button */
+  background-color: #FB8604;
+  /* overwrites browser defaults */
+  /* resets the border */
+  border: none;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  color: #000000;
   display: inline-block;
   /* takes the font from the outer container */
   font-family: inherit;
@@ -185,8 +180,8 @@ button {
 }
 
 .button__secondary {
-  background-color: var(--tertiary-color);
-  color: var(--white);
+  background-color: #1200ae;
+  color: #ffffff;
 }
 
 button:hover,
@@ -202,16 +197,19 @@ button:focus,
 /* >>>Home page elements<<< */
 .profile {
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.profile__item {
   padding: 5px;
   width: auto;
 }
@@ -219,12 +217,11 @@ button:focus,
 .profile,
 .profile__portrait {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5px;
   width: 100%;
 }
 
@@ -250,8 +247,8 @@ main {
 
 .portrait {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,7 +298,7 @@ td {
 }
 
 .grid__item {
-  background-color: var(--grid-color);
+  background-color: lightgray;
   padding: 5px;
   width: auto;
 }
@@ -342,6 +339,7 @@ td {
     fill: #f76414;
   }
 }
+
 @keyframes color-change {
   from {
     fill: #edc655;
@@ -354,63 +352,63 @@ td {
 
 .sun {
   -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
+  animation: 4s color-change infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 .cloud-front {
   -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
+  animation: 30s cloud-move infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
 
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
 
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 .cloud-back {
   -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-          animation: 34s cloud-move-reverse infinite alternate linear;
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
