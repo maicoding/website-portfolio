@@ -188,9 +188,6 @@ button:focus,
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.profile__item {
   padding: 5px;
   width: auto;
 }
@@ -199,6 +196,7 @@ button:focus,
 .profile__portrait {
   align-items: center;
   display: flex;
+  padding: 5px;
   width: 100%;
 }
 
