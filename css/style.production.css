@@ -303,7 +303,8 @@ td {
 
 .grid__item {
   background-color: var(--grid-color);
-  padding: 5px;
+  min-height: 180px;
+  padding: 18px;
   width: auto;
 }
 
